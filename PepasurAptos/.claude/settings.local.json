@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(aptos:*)",
+      "mcp__aptos-mcp__build_smart_contract_on_aptos",
+      "Bash(mv:*)",
+      "Bash(cat:*)",
+      "mcp__aptos-mcp__list_aptos_resources",
+      "mcp__aptos-mcp__get_specific_aptos_resource",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(node -e:*)",
+      "Bash(node scripts/update-server-signer.js:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "mcp__aptos-mcp__get_aptos_build_applications",
+      "mcp__aptos-mcp__create_aptos_build_api_resource_application",
+      "mcp__aptos-mcp__create_aptos_build_api_key",
+      "Bash(npx tsc:*)",
+      "mcp__aptos-mcp__build_dapp_on_aptos_guidance_prompt",
+      "WebSearch",
+      "Bash(git clone:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

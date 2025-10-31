@@ -1,0 +1,14 @@
+[package]
+name = "pepasur"
+version = "1.0.0"
+
+[addresses]
+pepasur = "_"
+
+[dev-addresses]
+pepasur = "0x123"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"

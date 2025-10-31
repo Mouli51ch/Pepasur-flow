@@ -1,0 +1,246 @@
+/* Pepasur Marketplace Styles */
+
+/* Import the main game's pixel art styling */
+@import url('../../frontend/app/globals.css');
+
+/* Marketplace Specific Styles */
+.marketplace-filters {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
+.nft-card {
+  transition: all 0.3s ease;
+}
+
+.nft-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Enhanced rarity glow effects */
+.glow-green {
+  text-shadow: 
+    0 0 5px #4A8C4A, 
+    0 0 10px #4A8C4A,
+    0 0 15px #4A8C4A,
+    0 0 20px #4A8C4A;
+  color: #4A8C4A;
+}
+
+.glow-blue {
+  text-shadow: 
+    0 0 5px #3498DB, 
+    0 0 10px #3498DB,
+    0 0 15px #3498DB,
+    0 0 20px #3498DB;
+  color: #3498DB;
+}
+
+.glow-purple {
+  text-shadow: 
+    0 0 5px #A259FF, 
+    0 0 10px #A259FF,
+    0 0 15px #A259FF,
+    0 0 20px #A259FF;
+  color: #A259FF;
+}
+
+.glow-yellow {
+  text-shadow: 
+    0 0 5px #FFEA00, 
+    0 0 10px #FFEA00,
+    0 0 15px #FFEA00,
+    0 0 20px #FFEA00;
+  color: #FFEA00;
+}
+
+/* NFT Card Hover Effects */
+.nft-card .group:hover .pixel-text-3d-white {
+  animation: pixel-3d-glow 2s ease-in-out infinite;
+}
+
+.nft-card .group:hover .pixel-text-3d-green {
+  animation: pixel-3d-glow 2s ease-in-out infinite;
+}
+
+/* Filter Button Hover Effects */
+.marketplace-filters button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(74, 140, 74, 0.3);
+}
+
+/* Price Range Slider Styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 0;
+  background: #4A8C4A;
+  border: 2px solid #4A8C4A;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #000;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 0;
+  background: #4A8C4A;
+  border: 2px solid #4A8C4A;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #000;
+}
+
+/* Search Input Styling */
+input[type="text"] {
+  font-family: var(--font-press-start);
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+}
+
+input[type="text"]:focus {
+  box-shadow: 
+    0 0 10px rgba(74, 140, 74, 0.5),
+    0 0 20px rgba(74, 140, 74, 0.2);
+}
+
+/* Select Styling */
+select {
+  font-family: var(--font-press-start);
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%234A8C4A' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 32px;
+}
+
+/* Loading Animation for NFT Cards */
+@keyframes nft-loading {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.nft-card {
+  animation: nft-loading 0.6s ease-out;
+}
+
+.nft-card:nth-child(1) { animation-delay: 0.1s; }
+.nft-card:nth-child(2) { animation-delay: 0.2s; }
+.nft-card:nth-child(3) { animation-delay: 0.3s; }
+.nft-card:nth-child(4) { animation-delay: 0.4s; }
+.nft-card:nth-child(5) { animation-delay: 0.5s; }
+.nft-card:nth-child(6) { animation-delay: 0.6s; }
+.nft-card:nth-child(7) { animation-delay: 0.7s; }
+.nft-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .marketplace-filters {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nft-card {
+    margin-bottom: 1rem;
+  }
+  
+  .marketplace-filters {
+    padding: 1rem;
+  }
+}
+
+/* Empty State Styling */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.empty-state .emoji {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Stats Display */
+.nft-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-family: var(--font-press-start);
+}
+
+.stat-label {
+  color: #CCCCCC;
+}
+
+.stat-value {
+  font-weight: bold;
+}
+
+/* Rarity Badge Animation */
+.rarity-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.rarity-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.rarity-badge:hover::before {
+  left: 100%;
+}
+
+/* Purchase Button Animation */
+.purchase-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.purchase-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.purchase-button:active::after {
+  width: 300px;
+  height: 300px;
+}
