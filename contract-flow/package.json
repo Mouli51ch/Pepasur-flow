@@ -1,0 +1,54 @@
+{
+  "name": "pepasur-flow-contracts",
+  "version": "1.0.0",
+  "description": "Pepasur smart contracts for Flow EVM Testnet",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network flowTestnet",
+    "deploy:simple": "hardhat run scripts/deploy-simple.js --network flowTestnet",
+    "deploy:fixed": "hardhat run scripts/deploy-fixed.js --network flowTestnet",
+    "test:fixed": "hardhat run scripts/test-fixed-contract.js --network flowTestnet",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "initialize": "hardhat run scripts/initialize.js --network flowTestnet",
+    "verify": "hardhat run scripts/verify.js --network flowTestnet",
+    "node": "hardhat node",
+    "clean": "hardhat clean"
+  },
+  "keywords": [
+    "pepasur",
+    "flow",
+    "evm",
+    "mafia",
+    "game",
+    "blockchain"
+  ],
+  "author": "Pepasur Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.0.0",
+    "chai": "^4.3.10",
+    "hardhat": "^2.19.4",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.10.0"
+  }
+}
