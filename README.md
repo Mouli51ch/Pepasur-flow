@@ -7,6 +7,12 @@
 
 **PEPASUR** is a blockchain-based multiplayer Mafia game built on Flow EVM Testnet. Players stake FLOW tokens to enter games, engage in strategic social deduction gameplay, and winners share 98% of the prize pool.
 
+## 🎥 Demo Video
+
+[![PEPASUR Demo on Flow EVM](https://img.youtube.com/vi/paaP_X7KJk4/maxresdefault.jpg)](https://www.youtube.com/watch?v=paaP_X7KJk4)
+
+**Watch the full gameplay demo**: [PEPASUR on Flow EVM Testnet](https://www.youtube.com/watch?v=paaP_X7KJk4)
+
 ## 🎮 Game Overview
 
 PEPASUR (Asur means demon in Hindi) brings the classic Mafia party game to the blockchain with real crypto stakes. Players are secretly assigned roles (Villagers, Mafia, Detective, Doctor) and must work together or deceive to eliminate the opposing team.
