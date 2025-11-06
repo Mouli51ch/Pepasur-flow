@@ -1,5 +1,0 @@
-build/
-.env
-.aptos/
-server-key.json
-*.pem
